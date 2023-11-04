@@ -7,6 +7,7 @@ PASSWORD = os.getenv("PASSWORD")
 
 def send_email(image):
     """Sends message with image attachment to the target email address"""
+    print("send_email function started!")
     message = EmailMessage()
     message["Subject"] = "INTRUDER ALERT!"
     message.set_content("INTRUDER DETECTED! ALERT! INTRUDER DETECTED! ALERT!")
@@ -23,6 +24,7 @@ def send_email(image):
     gmail.login(SENDER, PASSWORD)
     gmail.sendmail(SENDER, TARGET, message.as_string())
     gmail.quit()
+    print("send_email function ended!")
 
 if __name__ == "__main__":
-    send_email(image_path="./images/19.png")
+    send_email(image="./images/19.png")
