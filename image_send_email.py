@@ -1,10 +1,9 @@
 import smtplib, os, imghdr
 from email.message import EmailMessage
 
-PASSWORD = "qchoooetuqctnzsi"
 SENDER = "khui3850@gmail.com"
 TARGET = "khui3850@gmail.com"
-# PASSWORD = os.getenv("PASSWORD")  
+PASSWORD = os.getenv("PASSWORD")  
 
 def send_email(image):
     """Sends message with image attachment to the target email address"""

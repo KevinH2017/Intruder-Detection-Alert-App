@@ -47,7 +47,6 @@ while True:
     # Only when status_list has both 0 and 1 does send_email() run
     if status_list[0] == 1 and status_list[1] == 0:
         send_email(image_detect)
-        # print("Image Detected!")
 
     cv2.imshow("My Video", frame)
     key = cv2.waitKey(1)
